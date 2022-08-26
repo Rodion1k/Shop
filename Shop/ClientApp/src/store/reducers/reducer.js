@@ -11,6 +11,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 products: state.cartProducts = action.payload,
             }
+        case actionTypes.LOAD_PRODUCTS:
+            return {
+                ...state,
+                products: state // TODO add state products
+            }
         default:
             return state;
     }
